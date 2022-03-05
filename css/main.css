@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Agency FB'), url('AGENCYB.woff') format('woff');
+    }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x:hidden;
+    background-color: rgb(30,29,50);
+}
+img{
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6, small{
+    font-family: 'Agency FB', sans-serif;
+    letter-spacing: 1px;
+}
+p{
+    line-height: 1.4;
+}
+.header{
+    position: relative;
+    /* border: 1px solid red; */
+}
+.carousel{
+    display: flex;
+    flex-direction: row;
+    margin: 2em auto;
+    width: 90%;
+    height: 300px;
+}
+.card{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: none;
+    opacity: 0.5;
+    box-shadow: 0 -5px 5px rgba(0,0,0,.12);
+    animation-name:fade;
+    animation-duration:1s;
+}
+.card-img{
+    margin: 0;
+    height: 80%;
+    object-fit: cover;
+    box-shadow: 0 0 12px rgba(0,0,0,.1);
+}
+.card-body{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.card-1{
+    opacity: 1;
+    display: block;
+    background-color:#3DD0D8;
+}
+.card-2{
+    background-color:#5C9DDD;
+}
+.card-3{
+    background-color:#7C69E3;
+}
+.body-title{
+    text-align: center;
+}
+
+.arrow{
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    padding: 1em;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.arrow-left{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.arrow-right{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: auto;
+    right: 0;
+}
+@keyframes fade{
+    from{
+      opacity:0.4;
+    }
+    to{
+      opacity:1;
+    }
+  }
+@media(min-width:800px){
+    .header{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .card{
+        position: unset;
+        display: inline-block;
+        width: 30%;
+    }
+}
+ 
+
+
+
+/* -------------------------
+
+-------------------------- */
+
+.container{
+    background-color: #292845;
+    padding: 1em 2em;
+    color: #fff;
+    margin: 2em 1em ;
+    box-shadow: 0 0 12px rgba(0,0,0,.12);
+    border-radius: 5px;
+}
+.comments{
+    position: relative;
+    color: white;
+}
+.row{
+    margin: 3em 0;
+    border-bottom: 1px solid rgba(255,255,255,.15) ;
+}
+.comments-img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: auto;
+}
+.row .body{
+    color: rgba(255, 255, 255, 0.8);
+}
+.comments-bodyTitle{
+    margin-bottom: 2px;
+    text-align: right;
+}
+.comments-bodySmall{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.comments-bodySmall small:nth-child(2){
+    color: #3DD0D8;
+}
+@media(min-width:800px) {
+    .container{
+        width: 800px;
+        margin: 4em auto;
+        padding: 2em 4em;
+    }
+    .comments-img{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+    }
+    .comments-bodyTitle{
+        text-align: left;
+    }
+    .comments-bodySmall{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: unset;
+    }
+    .comments-bodyTitle,
+    .comments-bodySmall,
+    .row .body p{
+        margin-left: 80px;
+    }
+    .col-2 img,
+    .row .col-2{
+        margin-left: 50px;
+    }
+    .col-3 img,
+    .row .col-3{
+        margin-left: 100px;
+    }
+    .col-4 img,
+    .row .col-4{
+        margin-left: 150px;
+    }
+}
+
+/* ------------------------
+-------------------------- */
+
+.input{
+    font-family: 'Agency FB', sans-serif;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color:rgb(30,29,50);
+    font-size: 1.1rem;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}   
+.formBtn{
+    padding: 0.75em 1.25em;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white; 
+    border: none;
+    outline: none;   
+    border-radius: 5px;        
+    background-image: linear-gradient(to right, #00d2ff 0%, #928DAB  51%, #00d2ff  100%);
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.formBtn:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+@media(min-width:800px){
+    input[type="text"],
+    input[type="email"]{
+        width: 32.80%;
+        display: inline-block;
+    }
+}
+         
